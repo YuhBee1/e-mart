@@ -1,0 +1,14 @@
+{
+  "2026-03-20": {
+    "pageviews": 1,
+    "orders": 0,
+    "revenue": 0,
+    "events": [
+      {
+        "type": "pageview",
+        "ts": 1774011366366,
+        "page": "/"
+      }
+    ]
+  }
+}
