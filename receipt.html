@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Order Receipt — Paramount E-mart</title>
+  <meta name="robots" content="noindex, nofollow"/>
+  <link rel="icon" type="image/png" href="images/logo.png"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/themes.css"/>
+  <script src="js/theme.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    body { background: var(--black); color: var(--white); font-family: var(--font-body); }
+
+    .rcpt-wrap {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* ── Header ── */
+    .rcpt-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 28px;
+      border-bottom: 1px solid var(--dark2);
+      margin-bottom: 36px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .rcpt-brand {
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+    }
+    .rcpt-brand span {
+      display: block;
+      font-size: 9px;
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      color: var(--gray);
+      margin-top: 3px;
+    }
+    .rcpt-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(76,175,80,0.1);
+      border: 1px solid rgba(76,175,80,0.3);
+      padding: 8px 16px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #4caf50;
+    }
+    .rcpt-badge-dot {
+      width: 7px; height: 7px;
+      background: #4caf50;
+      border-radius: 50%;
+    }
+
+    /* ── Title ── */
+    .rcpt-title {
+      font-family: var(--font-display);
+      font-size: clamp(32px, 6vw, 52px);
+      font-weight: 300;
+      margin-bottom: 6px;
+    }
+    .rcpt-subtitle {
+      font-size: 12px;
+      color: var(--gray);
+      letter-spacing: 0.1em;
+      margin-bottom: 36px;
+    }
+
+    /* ── Info grid ── */
+    .rcpt-meta {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      border: 1px solid var(--dark2);
+      margin-bottom: 32px;
+    }
+    .rcpt-meta-cell {
+      padding: 16px 20px;
+      border-right: 1px solid var(--dark2);
+      border-bottom: 1px solid var(--dark2);
+    }
+    .rcpt-meta-cell:nth-child(even) { border-right: none; }
+    .rcpt-meta-label {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 5px;
+    }
+    .rcpt-meta-value {
+      font-size: 13px;
+      color: var(--white);
+      font-weight: 500;
+      word-break: break-all;
+    }
+
+    /* ── Items table ── */
+    .rcpt-section-title {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 12px;
+    }
+    .rcpt-items {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 8px;
+    }
+    .rcpt-items th {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gray);
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--dark2);
+      text-align: left;
+    }
+    .rcpt-items th:last-child { text-align: right; }
+    .rcpt-items td {
+      padding: 14px 12px;
+      border-bottom: 1px solid var(--dark3);
+      font-size: 13px;
+      vertical-align: top;
+    }
+    .rcpt-items td:last-child { text-align: right; font-weight: 600; }
+    .rcpt-item-name { font-weight: 500; }
+    .rcpt-item-qty { font-size: 11px; color: var(--gray); margin-top: 3px; }
+
+    /* ── Totals ── */
+    .rcpt-totals {
+      margin-top: 4px;
+      border: 1px solid var(--dark2);
+      padding: 16px 20px;
+      margin-bottom: 32px;
+    }
+    .rcpt-total-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: var(--gray);
+      padding: 5px 0;
+    }
+    .rcpt-total-row.discount { color: #4caf50; }
+    .rcpt-total-row.grand {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 300;
+      color: var(--white);
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid var(--dark2);
+    }
+
+    /* ── Tracking block ── */
+    .rcpt-tracking {
+      background: #0a140a;
+      border: 1px solid #2d4a2d;
+      padding: 20px 24px;
+      margin-bottom: 32px;
+    }
+    .rcpt-tracking-label {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: #4caf50;
+      margin-bottom: 8px;
+    }
+    .rcpt-tracking-id {
+      font-family: var(--font-body);
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+    .rcpt-tracking-note {
+      font-size: 11px;
+      color: var(--gray);
+      line-height: 1.7;
+      margin-bottom: 14px;
+    }
+    .rcpt-track-btn {
+      display: inline-block;
+      background: #4caf50;
+      color: #000;
+      padding: 10px 24px;
+      font-family: var(--font-body);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+    }
+
+    /* ── Actions ── */
+    .rcpt-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 36px;
+    }
+    .rcpt-btn {
+      padding: 14px 28px;
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      cursor: pointer;
+      border: 1px solid var(--mid);
+      background: none;
+      color: var(--white);
+      transition: all 0.2s;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .rcpt-btn:hover { background: var(--dark2); }
+    .rcpt-btn.primary {
+      background: var(--white);
+      color: var(--black);
+      border-color: var(--white);
+    }
+    .rcpt-btn.primary:hover { background: var(--off-white); }
+
+    /* ── Footer ── */
+    .rcpt-footer {
+      border-top: 1px solid var(--dark2);
+      padding-top: 24px;
+      font-size: 11px;
+      color: var(--gray);
+      line-height: 1.8;
+      text-align: center;
+    }
+
+    /* ── Empty/error state ── */
+    .rcpt-empty {
+      text-align: center;
+      padding: 80px 24px;
+    }
+    .rcpt-empty h2 {
+      font-family: var(--font-display);
+      font-size: 32px;
+      font-weight: 300;
+      margin-bottom: 12px;
+    }
+    .rcpt-empty p { color: var(--gray); font-size: 13px; margin-bottom: 28px; }
+
+    /* ── Print styles ── */
+    @media print {
+      body { background: #fff !important; color: #000 !important; }
+      .rcpt-actions, nav, .theme-trigger, .theme-panel { display: none !important; }
+      .rcpt-wrap { padding: 20px; }
+      .rcpt-header, .rcpt-meta, .rcpt-items, .rcpt-totals, .rcpt-tracking { border-color: #ccc !important; }
+      .rcpt-badge { background: #eafaea !important; border-color: #4caf50 !important; }
+      .rcpt-tracking { background: #f0fff0 !important; border-color: #4caf50 !important; }
+      * { color: #000 !important; }
+      .rcpt-meta-label, .rcpt-section-title, .rcpt-total-row, .rcpt-footer { color: #666 !important; }
+    }
+
+    @media (max-width: 480px) {
+      .rcpt-meta { grid-template-columns: 1fr; }
+      .rcpt-meta-cell { border-right: none; }
+      .rcpt-meta-cell:nth-child(even) { border-right: none; }
+      .rcpt-actions { flex-direction: column; }
+      .rcpt-btn { width: 100%; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="rcpt-wrap" id="receiptRoot">
+  <!-- Filled by JS below -->
+  <div class="rcpt-empty">
+    <p style="color:var(--gray);font-size:13px;">Loading receipt…</p>
+  </div>
+</div>
+
+<script src="js/products.js" defer></script>
+<script>
+(function() {
+  'use strict';
+
+  function formatPrice(n) {
+    return '₦' + Number(n).toLocaleString('en-NG', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  }
+
+  function getParam(key) {
+    return new URLSearchParams(window.location.search).get(key) || '';
+  }
+
+  function getOrder(orderId) {
+    try {
+      const orders = JSON.parse(localStorage.getItem('pes_orders') || '[]');
+      return orders.find(o => o.id === orderId) || null;
+    } catch { return null; }
+  }
+
+  function renderEmpty(msg) {
+    document.getElementById('receiptRoot').innerHTML = `
+      <div class="rcpt-empty">
+        <h2>Receipt Not Found</h2>
+        <p>${msg || 'We could not find this order. It may have been placed on a different device.'}</p>
+        <a href="index.html" class="rcpt-btn primary">Return to Store</a>
+      </div>`;
+  }
+
+  function renderReceipt(order) {
+    const items = (order.items || []);
+    const rawTotal = order.rawTotal || order.total || 0;
+    const deliveryFee = order.deliveryFee || 0;
+    const bulkSaving = rawTotal - (order.total - deliveryFee - (order.promoDiscount || 0));
+    const hasDiscount = bulkSaving > 50 || order.promoCode;
+
+    const itemsHTML = items.map(item => `
+      <tr>
+        <td>
+          <div class="rcpt-item-name">${item.name}</div>
+          <div class="rcpt-item-qty">Unit price: ${formatPrice(item.price)}</div>
+        </td>
+        <td style="text-align:center;">${item.qty}</td>
+        <td>${formatPrice(item.price * item.qty)}</td>
+      </tr>`).join('');
+
+    const trackingId = order.trackingId || '';
+
+    const root = document.getElementById('receiptRoot');
+    root.innerHTML = `
+      <!-- Header -->
+      <div class="rcpt-header">
+        <div class="rcpt-brand">PARAMOUNT E-STORE<span>Uyo, Akwa Ibom State, Nigeria</span></div>
+        <div class="rcpt-badge"><div class="rcpt-badge-dot"></div>Payment Confirmed</div>
+      </div>
+
+      <!-- Title -->
+      <h1 class="rcpt-title">Order Receipt</h1>
+      <p class="rcpt-subtitle">Issued ${new Date().toLocaleDateString('en-NG', {day:'numeric',month:'long',year:'numeric'})}</p>
+
+      <!-- Order meta -->
+      <div class="rcpt-meta">
+        <div class="rcpt-meta-cell">
+          <div class="rcpt-meta-label">Order ID</div>
+          <div class="rcpt-meta-value">${order.id}</div>
+        </div>
+        <div class="rcpt-meta-cell">
+          <div class="rcpt-meta-label">Payment Reference</div>
+          <div class="rcpt-meta-value">${order.reference || '—'}</div>
+        </div>
+        <div class="rcpt-meta-cell">
+          <div class="rcpt-meta-label">Customer</div>
+          <div class="rcpt-meta-value">${order.customer || '—'}</div>
+        </div>
+        <div class="rcpt-meta-cell">
+          <div class="rcpt-meta-label">Date</div>
+          <div class="rcpt-meta-value">${order.date || new Date().toLocaleDateString('en-NG')}</div>
+        </div>
+        <div class="rcpt-meta-cell">
+          <div class="rcpt-meta-label">Email</div>
+          <div class="rcpt-meta-value">${order.email || '—'}</div>
+        </div>
+        <div class="rcpt-meta-cell">
+          <div class="rcpt-meta-label">Phone</div>
+          <div class="rcpt-meta-value">${order.phone || '—'}</div>
+        </div>
+        <div class="rcpt-meta-cell" style="grid-column:1/-1;border-right:none;">
+          <div class="rcpt-meta-label">Delivery Address</div>
+          <div class="rcpt-meta-value">${order.address || '—'}</div>
+        </div>
+      </div>
+
+      <!-- Items -->
+      <div class="rcpt-section-title">Items Ordered</div>
+      <table class="rcpt-items">
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th style="text-align:center;">Qty</th>
+            <th style="text-align:right;">Subtotal</th>
+          </tr>
+        </thead>
+        <tbody>${itemsHTML}</tbody>
+      </table>
+
+      <!-- Totals -->
+      <div class="rcpt-totals">
+        <div class="rcpt-total-row"><span>Subtotal</span><span>${formatPrice(rawTotal)}</span></div>
+        ${order.bulkTier ? `<div class="rcpt-total-row discount"><span>Bulk Discount (${order.bulkTier})</span><span>−${formatPrice(bulkSaving > 0 ? bulkSaving : 0)}</span></div>` : ''}
+        ${order.promoCode ? `<div class="rcpt-total-row discount"><span>Promo Code (${order.promoCode})</span><span>Applied</span></div>` : ''}
+        <div class="rcpt-total-row"><span>Delivery Fee</span><span>${deliveryFee > 0 ? formatPrice(deliveryFee) : 'Free'}</span></div>
+        <div class="rcpt-total-row grand"><span>Total Paid</span><span>${formatPrice(order.total)}</span></div>
+      </div>
+
+      <!-- Tracking -->
+      ${trackingId ? `
+      <div class="rcpt-tracking">
+        <div class="rcpt-tracking-label">Shipment Tracking ID</div>
+        <div class="rcpt-tracking-id">${trackingId}</div>
+        <div class="rcpt-tracking-note">Your order is on its way. Use the tracking ID above to follow your delivery in real time.</div>
+        <a href="tracking.html?id=${trackingId}" class="rcpt-track-btn">Track My Order →</a>
+      </div>` : ''}
+
+      <!-- Actions -->
+      <div class="rcpt-actions">
+        <button class="rcpt-btn primary" onclick="window.print()">🖨 Print Receipt</button>
+        <button class="rcpt-btn" onclick="shareReceipt('${order.id}')">📤 Share Receipt</button>
+        <a href="index.html" class="rcpt-btn">← Continue Shopping</a>
+      </div>
+
+      <!-- Footer -->
+      <div class="rcpt-footer">
+        <strong>Paramount E-mart</strong> · Uyo, Akwa Ibom State, Nigeria<br/>
+        Phone: +234 916 043 9848 · Email: info@paramountemart.com<br/>
+        Thank you for shopping with us. Keep this receipt for your records.
+      </div>
+    `;
+
+    // Update page title
+    document.title = 'Receipt ' + order.id + ' — Paramount E-mart';
+  }
+
+  function shareReceipt(orderId) {
+    const url = window.location.origin + '/receipt.html?order=' + encodeURIComponent(orderId);
+    if (navigator.share) {
+      navigator.share({ title: 'My Paramount E-mart Receipt', url })
+        .catch(() => fallbackCopy(url));
+    } else {
+      fallbackCopy(url);
+    }
+  }
+  window.shareReceipt = shareReceipt;
+
+  function fallbackCopy(text) {
+    navigator.clipboard.writeText(text)
+      .then(() => alert('Receipt link copied to clipboard!'))
+      .catch(() => prompt('Copy this link:', text));
+  }
+
+  // ── Init ──────────────────────────────────────────────────
+  document.addEventListener('DOMContentLoaded', function() {
+    const orderId = getParam('order');
+    if (!orderId) { renderEmpty('No order ID was provided.'); return; }
+
+    // Try localStorage first (same device as purchase)
+    let order = getOrder(orderId);
+
+    if (order) {
+      renderReceipt(order);
+      return;
+    }
+
+    // Not found locally — try server
+    const SERVER = (location.protocol === 'file:') ? 'http://localhost:3000' : location.origin;
+    fetch(SERVER + '/api/orders', { headers: { 'X-PDS-Admin': '1' } })
+      .then(r => r.ok ? r.json() : null)
+      .then(data => {
+        if (data && Array.isArray(data.orders)) {
+          order = data.orders.find(o => o.id === orderId);
+        }
+        if (order) renderReceipt(order);
+        else renderEmpty('Order <strong>' + orderId + '</strong> was not found. It may have been placed on a different device.');
+      })
+      .catch(() => renderEmpty('Could not load order data. Please check your connection.'));
+  });
+})();
+</script>
+
+<!-- SW Registration -->
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('/sw.js', { scope: '/' }).catch(function(){});
+    });
+  }
+</script>
+</body>
+</html>

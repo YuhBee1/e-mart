@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms & Support - Paramount E-mart</title>
+    <link rel="icon" type="image/png" href="../images/logo.png"/>
+    <link rel="apple-touch-icon" href="../images/logo.png"/>
+    <meta property="og:image" content="https://www.paramountdigitalservices.com/images/logo.png"/>
+    <meta name="twitter:image" content="https://www.paramountdigitalservices.com/images/logo.png"/>
+    <script src="config.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+            padding: 40px 20px 0;
+        }
+
+        header img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(2, 136, 209, 0.3);
+        }
+
+        h1 {
+            font-size: 38px;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #0288d1 0%, #00bcd4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            color: #b0bec5;
+            margin-bottom: 30px;
+        }
+
+        .forms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .form-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(2, 136, 209, 0.2);
+            border-radius: 12px;
+            padding: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: #0288d1;
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(2, 136, 209, 0.2);
+        }
+
+        .form-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .form-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .form-description {
+            font-size: 14px;
+            color: #b0bec5;
+            margin-bottom: 20px;
+            flex: 1;
+        }
+
+        .form-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #0288d1 0%, #00bcd4 100%);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            align-self: flex-start;
+        }
+
+        .features {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(2, 136, 209, 0.2);
+            border-radius: 12px;
+            padding: 30px;
+            color: white;
+            backdrop-filter: blur(10px);
+            margin-bottom: 30px;
+        }
+
+        .features h2 {
+            color: #0288d1;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .features-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .feature-item:before {
+            content: "✓";
+            color: #0288d1;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        footer {
+            text-align: center;
+            color: #b0bec5;
+            padding: 30px 0;
+            border-top: 1px solid rgba(2, 136, 209, 0.2);
+            margin-top: 50px;
+        }
+
+        footer a {
+            color: #0288d1;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #00bcd4;
+        }
+
+        .back-btn {
+            display: inline-block;
+            color: #0288d1;
+            text-decoration: none;
+            margin-bottom: 30px;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .back-btn:hover {
+            color: #00bcd4;
+            transform: translateX(-5px);
+        }
+
+        .back-btn:before {
+            content: "← ";
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 28px;
+            }
+
+            .forms-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .features-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation -->
+        <a href="../index.html" class="back-btn">Back to Store</a>
+
+        <!-- Header -->
+        <header>
+            <img src="../images/logo.png" alt="Paramount E-mart Logo">
+            <h1>📋 Forms & Support Center</h1>
+            <p class="subtitle">Choose a form below to get started</p>
+        </header>
+
+        <!-- Features -->
+        <div class="features">
+            <h2>Why Use Our Forms?</h2>
+            <div class="features-list">
+                <div class="feature-item">Fast and Simple</div>
+                <div class="feature-item">Secure & Private</div>
+                <div class="feature-item">Mobile Friendly</div>
+                <div class="feature-item">Quick Response</div>
+                <div class="feature-item">Professional Service</div>
+                <div class="feature-item">24/7 Available</div>
+            </div>
+        </div>
+
+        <!-- Forms Grid -->
+        <div class="forms-grid">
+            <!-- Receipt Generator -->
+            <a href="receipt-generator.html" class="form-card">
+                <div class="form-icon">🧾</div>
+                <div class="form-title">Receipt Generator</div>
+                <div class="form-description">
+                    Generate receipts for past purchases using your purchase ID. Perfect if you lost your original receipt!
+                </div>
+                <div class="form-badge">⭐ MOST POPULAR</div>
+            </a>
+
+            <!-- Contact Form -->
+            <a href="contact-form.html" class="form-card">
+                <div class="form-icon">💬</div>
+                <div class="form-title">Contact Us</div>
+                <div class="form-description">
+                    Get in touch with our customer service team. We're here to help with any questions!
+                </div>
+                <div class="form-badge">Quick Response</div>
+            </a>
+
+            <!-- Support Ticket -->
+            <a href="support-form.html" class="form-card">
+                <div class="form-icon">🎟️</div>
+                <div class="form-title">Support Ticket</div>
+                <div class="form-description">
+                    Report issues, request help, or track your support requests in real-time.
+                </div>
+                <div class="form-badge">Priority Support</div>
+            </a>
+
+            <!-- Product Review -->
+            <a href="review-form.html" class="form-card">
+                <div class="form-icon">⭐</div>
+                <div class="form-title">Product Review</div>
+                <div class="form-description">
+                    Share your experience! Your feedback helps us improve and helps other customers.
+                </div>
+                <div class="form-badge">Help Others</div>
+            </a>
+
+            <!-- Newsletter -->
+            <a href="newsletter-form.html" class="form-card">
+                <div class="form-icon">📧</div>
+                <div class="form-title">Newsletter Signup</div>
+                <div class="form-description">
+                    Subscribe to get exclusive deals, new product announcements, and special offers.
+                </div>
+                <div class="form-badge">Exclusive Deals</div>
+            </a>
+
+            <!-- Feedback Form -->
+            <a href="feedback-form.html" class="form-card">
+                <div class="form-icon">💡</div>
+                <div class="form-title">Feedback & Suggestions</div>
+                <div class="form-description">
+                    Help us improve! Share your ideas, suggestions, and feedback about our service.
+                </div>
+                <div class="form-badge">We Listen</div>
+            </a>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>
+                🔒 All forms are secure and your data is protected | 
+                <a href="../index.html">Back to Store</a>
+            </p>
+            <p style="margin-top: 10px; font-size: 12px;">
+                Paramount E-mart © 2026 | All Rights Reserved
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

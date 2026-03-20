@@ -1,0 +1,97 @@
+{
+  "siteName": "Paramount E-mart",
+  "location": "Uyo, Akwa Ibom State, Nigeria",
+  "currency": "NGN",
+  "version": "2.0.0",
+  "createdAt": "2025-01-01T00:00:00.000Z",
+  "marquee": "FREE DELIVERY on orders above ₦50,000 · GENUINE PRODUCTS GUARANTEED · FAST DELIVERY ACROSS NIGERIA",
+  "storeHero": {
+    "eyebrow": "Uyo’s Premium Appliance Store",
+    "title": "PARAMOUNT E-MART",
+    "subtitle": "Premium Electronics. Delivered Fast.",
+    "cta1": "Shop Now",
+    "cta2": "Track Order"
+  },
+  "trustStrip": [
+    {
+      "icon": "🚚",
+      "label": "Fast Delivery"
+    },
+    {
+      "icon": "🔒",
+      "label": "Secure Checkout"
+    },
+    {
+      "icon": "✓",
+      "label": "Genuine Products"
+    },
+    {
+      "icon": "↩",
+      "label": "Easy Returns"
+    }
+  ],
+  "footerConfig": {
+    "tagline": "Premium home appliances & electronics in Uyo, Akwa Ibom.",
+    "email": "info@paramountemart.com",
+    "phone": "+234 800 000 0000",
+    "location": "Uyo, Akwa Ibom State, Nigeria",
+    "hours": "Mon–Sat: 8am–8pm",
+    "copyright": "© 2025 Paramount E-mart. All rights reserved.",
+    "socials": {
+      "instagram": "",
+      "facebook": "",
+      "twitter": "",
+      "whatsapp": "",
+      "tiktok": "",
+      "youtube": ""
+    }
+  },
+  "seo": {
+    "title": "Paramount E-mart — Premium Electronics in Uyo, Akwa Ibom",
+    "desc": "Uyo’s trusted online store for home appliances, electronics, phones & generators.",
+    "ogImage": ""
+  },
+  "banner": {
+    "text": "",
+    "active": false,
+    "bg": "#c4a240",
+    "color": "#000"
+  },
+  "trackingText": {
+    "heading": "Track Your <em>Delivery</em>",
+    "description": "Every Paramount order is tracked end-to-end from our Uyo, Akwa Ibom hub to your door. Once dispatched, your shipment gets a live GPS trace — monitor speed, heading, distance covered and estimated arrival in real time. Enter your Tracking ID below to see exactly where your delivery is right now."
+  },
+  "sectionLabels": {},
+  "bulkTiers": [
+    {
+      "minQty": 5,
+      "maxQty": 9,
+      "discount": 5,
+      "label": "Starter"
+    },
+    {
+      "minQty": 10,
+      "maxQty": 24,
+      "discount": 10,
+      "label": "Silver"
+    },
+    {
+      "minQty": 25,
+      "maxQty": 49,
+      "discount": 15,
+      "label": "Gold"
+    },
+    {
+      "minQty": 50,
+      "maxQty": 99,
+      "discount": 20,
+      "label": "Platinum"
+    },
+    {
+      "minQty": 100,
+      "maxQty": null,
+      "discount": 28,
+      "label": "Enterprise"
+    }
+  ]
+}

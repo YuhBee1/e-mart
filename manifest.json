@@ -1,0 +1,64 @@
+{
+  "name": "Paramount E-mart",
+  "short_name": "E-mart",
+  "description": "Nigeria's trusted online store for premium home appliances, electronics, phones & generators. Based in Uyo, Akwa Ibom.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#080808",
+  "theme_color": "#080808",
+  "orientation": "portrait-primary",
+  "lang": "en-NG",
+  "scope": "/",
+  "categories": ["shopping", "lifestyle"],
+  "icons": [
+    { "src": "images/logo.png", "sizes": "72x72",   "type": "image/png", "purpose": "any maskable" },
+    { "src": "images/logo.png", "sizes": "96x96",   "type": "image/png", "purpose": "any maskable" },
+    { "src": "images/logo.png", "sizes": "128x128", "type": "image/png", "purpose": "any maskable" },
+    { "src": "images/logo.png", "sizes": "144x144", "type": "image/png", "purpose": "any maskable" },
+    { "src": "images/logo.png", "sizes": "152x152", "type": "image/png", "purpose": "any maskable" },
+    { "src": "images/logo.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "images/logo.png", "sizes": "384x384", "type": "image/png", "purpose": "any maskable" },
+    { "src": "images/logo.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ],
+  "shortcuts": [
+    {
+      "name": "Shop Now",
+      "short_name": "Shop",
+      "description": "Browse all products",
+      "url": "/?catalogue=all",
+      "icons": [{ "src": "images/logo.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Track Order",
+      "short_name": "Track",
+      "description": "Track your shipment",
+      "url": "/tracking.html",
+      "icons": [{ "src": "images/logo.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "View Receipt",
+      "short_name": "Receipt",
+      "description": "View your order receipt",
+      "url": "/receipt.html",
+      "icons": [{ "src": "images/logo.png", "sizes": "96x96" }]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "images/logo.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Paramount E-mart Homepage"
+    },
+    {
+      "src": "images/logo.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Paramount E-mart Mobile"
+    }
+  ],
+  "prefer_related_applications": false,
+  "display_override": ["window-controls-overlay", "standalone", "browser"]
+}

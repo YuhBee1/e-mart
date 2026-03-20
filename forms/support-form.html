@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Ticket - Paramount E-mart</title>
+    <link rel="icon" type="image/png" href="../../images/logo.png"/>
+    <link rel="apple-touch-icon" href="../../images/logo.png"/>
+    <meta property="og:image" content="https://www.paramountdigitalservices.com/images/logo.png"/>
+    <meta name="twitter:image" content="https://www.paramountdigitalservices.com/images/logo.png"/>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg, #0f3460 0%, #16213e 100%); min-height: 100vh; padding: 20px; }
+        .container { max-width: 700px; margin: 0 auto; }
+        header { display: flex; align-items: center; gap: 15px; margin-bottom: 40px; color: white; }
+        header img { width: 50px; height: 50px; border-radius: 6px; }
+        h1 { font-size: 28px; background: linear-gradient(135deg, #0288d1 0%, #00bcd4 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .back-btn { position: absolute; top: 20px; left: 20px; color: #0288d1; text-decoration: none; }
+        .back-btn:before { content: "← "; }
+        .form-card { background: rgba(255, 255, 255, 0.05); border: 2px solid rgba(2, 136, 209, 0.2); border-radius: 12px; padding: 40px; backdrop-filter: blur(10px); }
+        .form-group { margin-bottom: 20px; }
+        label { display: block; color: white; font-weight: 500; margin-bottom: 8px; }
+        input, textarea, select { width: 100%; padding: 12px 15px; border: 2px solid rgba(2, 136, 209, 0.3); border-radius: 6px; background: rgba(255, 255, 255, 0.05); color: white; font-size: 14px; font-family: inherit; transition: all 0.3s; }
+        input:focus, textarea:focus { outline: none; border-color: #0288d1; background: rgba(255, 255, 255, 0.08); }
+        textarea { resize: vertical; min-height: 120px; }
+        button { width: 100%; padding: 12px; background: linear-gradient(135deg, #0288d1 0%, #00bcd4 100%); color: white; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; transition: all 0.3s; }
+        button:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(2, 136, 209, 0.3); }
+        .message { padding: 15px; border-radius: 6px; margin-bottom: 20px; display: none; }
+        .message.success { background: rgba(39, 174, 96, 0.1); border: 2px solid #27ae60; color: #2ecc71; }
+        small { display: block; color: rgba(255, 255, 255, 0.4); margin-top: 5px; font-size: 12px; }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-btn">Back to Forms</a>
+
+    <div class="container">
+        <header>
+            <img src="../../images/logo.png" alt="Logo">
+            <h1>🎟️ Support Ticket</h1>
+        </header>
+
+        <div class="form-card">
+            <div id="message" class="message"></div>
+
+            <form onsubmit="submitForm(event)">
+                <div class="form-group">
+                    <label>Full Name *</label>
+                    <input type="text" required placeholder="Enter your full name">
+                </div>
+
+                <div class="form-group">
+                    <label>Email Address *</label>
+                    <input type="email" required placeholder="your@email.com">
+                </div>
+
+                <div class="form-group">
+                    <label>Order Number (if applicable)</label>
+                    <input type="text" placeholder="e.g., PES-123456-ABC">
+                    <small>If your issue relates to an order</small>
+                </div>
+
+                <div class="form-group">
+                    <label>Issue Category *</label>
+                    <select required>
+                        <option value="">Select a category</option>
+                        <option value="Order Issue">Order Issue</option>
+                        <option value="Delivery Problem">Delivery Problem</option>
+                        <option value="Product Defect">Product Defect</option>
+                        <option value="Payment Issue">Payment Issue</option>
+                        <option value="Refund/Return">Refund/Return</option>
+                        <option value="Website Bug">Website Bug</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Priority Level *</label>
+                    <select required>
+                        <option value="">Select priority</option>
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
+                        <option value="Urgent">Urgent</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Detailed Description *</label>
+                    <textarea required placeholder="Please describe your issue in detail..."></textarea>
+                </div>
+
+                <button type="submit">🎫 Create Support Ticket</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function submitForm(e) {
+            e.preventDefault();
+            const messageEl = document.getElementById('message');
+            messageEl.textContent = '✓ Support ticket #' + Math.floor(Math.random() * 100000) + ' created! We\'ll respond within 24 hours.';
+            messageEl.classList.add('success');
+            messageEl.style.display = 'block';
+            e.target.reset();
+            setTimeout(() => messageEl.style.display = 'none', 5000);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <link rel="icon" type="image/png" href="images/logo.png"/>
+  <link rel="apple-touch-icon" href="images/logo.png"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Support & Help — Paramount E-mart</title>
+  <meta name="description" content="Need help? Submit a support ticket and our team will get back to you within 24 hours."/>
+  <meta property="og:title" content="Support — Paramount E-mart"/>
+  <meta property="og:image" content="https://www.paramountdigitalservices.com/images/logo.png"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/popups.css"/>
+  <link rel="stylesheet" href="css/themes.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    /* ── Support page layout ── */
+    .support-page { max-width: 1100px; margin: 0 auto; padding: 60px 32px 100px; }
+    .support-hero { text-align: center; margin-bottom: 56px; }
+    .support-hero-eyebrow { font-size: 10px; letter-spacing: 0.35em; text-transform: uppercase; color: var(--gray); margin-bottom: 14px; }
+    .support-hero h1 { font-family: var(--font-display); font-size: clamp(36px,5vw,64px); font-weight: 300; color: var(--white); margin-bottom: 14px; }
+    .support-hero p  { font-size: 14px; color: var(--light-gray); max-width: 520px; margin: 0 auto; line-height: 1.8; }
+
+    /* ── Quick options ── */
+    .support-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 2px; margin-bottom: 56px; }
+    .support-opt { background: var(--dark); border: 1px solid var(--dark3); padding: 28px 24px; text-align: center; transition: border-color 0.2s; }
+    .support-opt:hover { border-color: var(--mid); }
+    .support-opt-icon { font-size: 28px; margin-bottom: 12px; }
+    .support-opt-label { font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--white); margin-bottom: 6px; }
+    .support-opt-desc { font-size: 12px; color: var(--gray); line-height: 1.6; }
+    .support-opt a { color: var(--white); text-decoration: none; border-bottom: 1px solid var(--mid); transition: border-color 0.2s; }
+    .support-opt a:hover { border-color: var(--white); }
+
+    /* ── Ticket form card ── */
+    .support-form-wrap { display: grid; grid-template-columns: 1fr 340px; gap: 2px; align-items: start; }
+    .support-form-card { background: var(--dark); border: 1px solid var(--dark3); padding: 40px 44px; }
+    .support-form-card h2 { font-family: var(--font-display); font-size: 32px; font-weight: 300; color: var(--white); margin-bottom: 8px; }
+    .support-form-card > p { font-size: 12px; color: var(--gray); margin-bottom: 32px; line-height: 1.7; }
+
+    /* Form fields */
+    .sf-group { margin-bottom: 20px; }
+    .sf-group label { display: block; font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--light-gray); margin-bottom: 8px; }
+    .sf-group input,
+    .sf-group select,
+    .sf-group textarea {
+      width: 100%; background: var(--black); border: 1px solid var(--dark3);
+      color: var(--white); font-family: var(--font-body); font-size: 13px;
+      padding: 12px 14px; outline: none; transition: border-color 0.2s;
+      appearance: none; -webkit-appearance: none;
+    }
+    .sf-group input:focus,
+    .sf-group select:focus,
+    .sf-group textarea:focus { border-color: var(--mid); }
+    .sf-group textarea { resize: vertical; min-height: 130px; }
+    .sf-group select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; cursor: pointer; }
+    .sf-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .sf-hint { font-size: 10px; color: var(--gray); margin-top: 5px; }
+
+    .pes-submit-btn {
+      width: 100%; background: var(--white); color: var(--black);
+      border: none; font-family: var(--font-body); font-size: 11px;
+      font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase;
+      padding: 16px; cursor: pointer; transition: background 0.2s;
+      margin-top: 8px;
+    }
+    .pes-submit-btn:hover:not(:disabled) { background: var(--off-white); }
+    .pes-submit-btn:disabled { opacity: 0.55; cursor: not-allowed; }
+
+    /* ── Feedback messages ── */
+    .pes-form-msg {
+      padding: 12px 16px; font-size: 13px; line-height: 1.6;
+      margin-bottom: 16px; border: 1px solid transparent;
+    }
+    .pes-form-msg--success { background: rgba(76,175,80,0.08); border-color: #4caf5055; color: #4caf50; }
+    .pes-form-msg--error   { background: rgba(239,83,80,0.08);  border-color: #ef535055; color: #ef5350; }
+    .pes-form-msg--info    { background: rgba(255,183,77,0.08); border-color: #ffb74d55; color: #ffb74d; }
+
+    /* ── Sidebar ── */
+    .support-sidebar { display: flex; flex-direction: column; gap: 2px; }
+    .support-info-card { background: var(--dark); border: 1px solid var(--dark3); padding: 28px 24px; }
+    .support-info-card h3 { font-size: 10px; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gray); margin-bottom: 16px; }
+    .sic-item { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 16px; }
+    .sic-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+    .sic-label { font-size: 10px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--light-gray); margin-bottom: 3px; }
+    .sic-value { font-size: 13px; color: var(--white); }
+    .sic-value a { color: var(--white); text-decoration: none; border-bottom: 1px solid var(--mid); }
+    .sic-value a:hover { border-color: var(--white); }
+    .sic-note { font-size: 11px; color: var(--gray); margin-top: 2px; }
+
+    .support-faq-card { background: var(--dark); border: 1px solid var(--dark3); padding: 28px 24px; }
+    .support-faq-card h3 { font-size: 10px; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gray); margin-bottom: 16px; }
+    .faq-item { border-bottom: 1px solid var(--dark3); padding: 14px 0; }
+    .faq-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .faq-q { font-size: 12px; font-weight: 600; color: var(--white); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+    .faq-q::after { content: '+'; color: var(--gray); font-size: 16px; flex-shrink: 0; transition: transform 0.2s; }
+    .faq-item.open .faq-q::after { transform: rotate(45deg); }
+    .faq-a { font-size: 12px; color: var(--gray); line-height: 1.7; margin-top: 10px; display: none; }
+    .faq-item.open .faq-a { display: block; }
+
+    /* ── Responsive ── */
+    @media (max-width: 860px) {
+      .support-form-wrap { grid-template-columns: 1fr; }
+      .support-sidebar { order: -1; }
+      .sf-row { grid-template-columns: 1fr; }
+      .support-form-card { padding: 28px 24px; }
+    }
+    @media (max-width: 560px) {
+      .support-page { padding: 40px 16px 80px; }
+      .support-options { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body class="admin-body">
+<div class="grain"></div>
+<div id="toast" class="toast"></div>
+
+<!-- NAV -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <div class="nav-left">
+      <a href="index.html" class="nav-logo" aria-label="Paramount E-mart Home">
+        <img src="images/logo.png" alt="Paramount E-mart" class="nav-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
+        <span class="nav-logo-text" style="display:none;">PARAMOUNT</span>
+      </a>
+    </div>
+    <div class="nav-center">
+      <a href="index.html" class="nav-link">← Store</a>
+      <a href="tracking.html" class="nav-link">Track Order</a>
+      <a href="support.html" class="nav-link" style="color:var(--white);">Support</a>
+    </div>
+    <div class="nav-right"></div>
+  </div>
+</nav>
+
+<!-- MAIN -->
+<main class="support-page" id="main-content">
+
+  <!-- Hero -->
+  <div class="support-hero">
+    <div class="support-hero-eyebrow">Paramount E-mart · Customer Care</div>
+    <h1>How Can We Help?</h1>
+    <p>Fill in the form below and our support team will get back to you within 24 hours. For urgent matters, call or WhatsApp us directly.</p>
+  </div>
+
+  <!-- Quick options -->
+  <div class="support-options">
+    <div class="support-opt">
+      <div class="support-opt-icon">📦</div>
+      <div class="support-opt-label">Track Your Order</div>
+      <div class="support-opt-desc"><a href="tracking.html">Enter your tracking ID →</a></div>
+    </div>
+    <div class="support-opt">
+      <div class="support-opt-icon">📞</div>
+      <div class="support-opt-label">Call Us</div>
+      <div class="support-opt-desc"><a href="tel:+2349160439848">+234 916 043 9848</a><br/>Mon – Sat · 8am – 6pm</div>
+    </div>
+    <div class="support-opt">
+      <div class="support-opt-icon">💬</div>
+      <div class="support-opt-label">WhatsApp</div>
+      <div class="support-opt-desc"><a href="https://wa.me/2349160439848" target="_blank">Chat with us →</a><br/>Fastest response</div>
+    </div>
+    <div class="support-opt">
+      <div class="support-opt-icon">✉</div>
+      <div class="support-opt-label">Email</div>
+      <div class="support-opt-desc"><a href="mailto:paramountdigitalservices@gmail.com">paramountdigitalservices@gmail.com</a></div>
+    </div>
+  </div>
+
+  <!-- Form + Sidebar -->
+  <div class="support-form-wrap">
+
+    <!-- TICKET FORM -->
+    <div class="support-form-card">
+      <h2>Submit a Support Ticket</h2>
+      <p>Describe your issue in detail. You'll receive a ticket reference by return email.</p>
+
+      <div id="spFormMsg" class="pes-form-msg" style="display:none;"></div>
+
+      <form id="pesSupportForm" onsubmit="return false;">
+        <div class="sf-row">
+          <div class="sf-group">
+            <label>Full Name *</label>
+            <input type="text" id="spName" placeholder="Your full name" autocomplete="name" required/>
+          </div>
+          <div class="sf-group">
+            <label>Email Address *</label>
+            <input type="email" id="spEmail" placeholder="your@email.com" autocomplete="email" required/>
+          </div>
+        </div>
+
+        <div class="sf-group">
+          <label>Order / Tracking Number <span style="color:var(--gray);font-size:10px;">— if applicable</span></label>
+          <input type="text" id="spOrder" placeholder="e.g. PES-123456-ABC"/>
+          <div class="sf-hint">Leave blank if your question isn't about a specific order</div>
+        </div>
+
+        <div class="sf-row">
+          <div class="sf-group">
+            <label>Issue Category *</label>
+            <select id="spCategory" required>
+              <option value="">Select a category</option>
+              <option value="Order Issue">Order Issue</option>
+              <option value="Delivery Problem">Delivery Problem</option>
+              <option value="Product Defect">Product Defect / Damaged Item</option>
+              <option value="Payment Issue">Payment Issue</option>
+              <option value="Refund/Return">Refund / Return Request</option>
+              <option value="Wrong Item">Wrong Item Delivered</option>
+              <option value="Website Bug">Website / App Bug</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="sf-group">
+            <label>Priority *</label>
+            <select id="spPriority" required>
+              <option value="">Select priority</option>
+              <option value="Low">Low — general enquiry</option>
+              <option value="Medium">Medium — minor issue</option>
+              <option value="High">High — significant problem</option>
+              <option value="Urgent">Urgent — order at risk</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="sf-group">
+          <label>Describe Your Issue *</label>
+          <textarea id="spDescription" placeholder="Please be as detailed as possible — what happened, when it happened, and what you've already tried. The more detail you provide, the faster we can help." required></textarea>
+        </div>
+
+        <button type="submit" class="pes-submit-btn">Submit Support Ticket →</button>
+        <p style="font-size:10px;color:var(--gray);margin-top:12px;text-align:center;">Your ticket is saved to our helpdesk and team is notified immediately. Response time: &lt; 24 hours.</p>
+      </form>
+    </div>
+
+    <!-- SIDEBAR -->
+    <div class="support-sidebar">
+
+      <div class="support-info-card">
+        <h3>Contact Information</h3>
+        <div class="sic-item">
+          <div class="sic-icon">📞</div>
+          <div>
+            <div class="sic-label">Phone</div>
+            <div class="sic-value"><a href="tel:+2349160439848">+234 916 043 9848</a></div>
+            <div class="sic-note">Mon – Sat · 8am – 6pm</div>
+          </div>
+        </div>
+        <div class="sic-item">
+          <div class="sic-icon">✉</div>
+          <div>
+            <div class="sic-label">Email</div>
+            <div class="sic-value"><a href="mailto:paramountdigitalservices@gmail.com">paramountdigitalservices@gmail.com</a></div>
+          </div>
+        </div>
+        <div class="sic-item">
+          <div class="sic-icon">💬</div>
+          <div>
+            <div class="sic-label">WhatsApp</div>
+            <div class="sic-value"><a href="https://wa.me/2349160439848" target="_blank">+234 916 043 9848</a></div>
+            <div class="sic-note">Fastest way to reach us</div>
+          </div>
+        </div>
+        <div class="sic-item">
+          <div class="sic-icon">📍</div>
+          <div>
+            <div class="sic-label">Location</div>
+            <div class="sic-value">Uyo, Akwa Ibom State, Nigeria</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="support-faq-card">
+        <h3>Common Questions</h3>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How do I track my order?</div>
+          <div class="faq-a">Visit our <a href="tracking.html" style="color:var(--white);">Track Order</a> page and enter your tracking ID or the email address you used at checkout.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">What is your return policy?</div>
+          <div class="faq-a">We accept returns of unused products in original packaging within 7 days of delivery. Contact us with your order reference to begin the process.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How long does delivery take?</div>
+          <div class="faq-a">Uyo & Akwa Ibom: same or next day. South-South: 1–2 days. Nationwide: 3–5 business days. International: on request.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">My payment failed but I was charged. What do I do?</div>
+          <div class="faq-a">Don't worry — failed payments are auto-reversed within 3–5 business days. Submit a ticket with your bank reference and we'll follow it up immediately.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Can I change or cancel my order?</div>
+          <div class="faq-a">Orders can be modified or cancelled within 2 hours of placement. After that, we may have already dispatched — call or WhatsApp us for fastest action.</div>
+        </div>
+      </div>
+
+    </div><!-- /.support-sidebar -->
+  </div><!-- /.support-form-wrap -->
+
+</main>
+
+<!-- FOOTER injected by shared.js -->
+
+<script src="js/products.js"></script>
+<script src="js/shared.js" defer></script>
+<script src="js/forms-integration.js" defer></script>
+<script src="js/theme.js" defer></script>
+</body>
+</html>
