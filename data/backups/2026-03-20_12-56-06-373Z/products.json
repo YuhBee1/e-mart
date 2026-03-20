@@ -1,0 +1,272 @@
+[
+  {
+    "id": 13,
+    "name": "1.5HP Inverter Split AC",
+    "category": "Air Conditioners",
+    "price": 320000,
+    "image": "images/logo.png",
+    "images": [
+      "images/logo.png"
+    ],
+    "badge": "BESTSELLER",
+    "description": "1.5HP inverter split air conditioner with R32 refrigerant, 5-star energy rating, auto-restart, sleep mode, self-cleaning, anti-bacterial filter and 4-way air distribution.",
+    "stock": "in-stock",
+    "stockQty": 24,
+    "featured": true
+  },
+  {
+    "id": 5,
+    "name": "4-Burner Gas Cooker with Oven",
+    "category": "Home Appliances",
+    "price": 185000,
+    "image": "images/logo.png",
+    "images": [
+      "images/logo.png"
+    ],
+    "badge": null,
+    "description": "Stainless steel 4-burner gas cooker with full glass oven, auto-ignition, flame failure device, rotisserie grill and tempered glass lid. 60cm freestanding design.",
+    "stock": "in-stock",
+    "stockQty": 6,
+    "featured": false
+  },
+  {
+    "id": 1,
+    "name": "55\" 4K UHD Smart TV",
+    "category": "Electronics",
+    "price": 420000,
+    "image": "images/logo.png",
+    "images": [
+      "images/logo.png"
+    ],
+    "badge": "BESTSELLER",
+    "description": "55-inch 4K Ultra HD Smart TV with HDR10, built-in Wi-Fi, Netflix & YouTube access, 3 HDMI ports and Dolby Audio surround sound. Energy-saving LED backlit display.",
+    "stock": "in-stock",
+    "stockQty": 16,
+    "featured": true
+  },
+  {
+    "id": 15,
+    "name": "2.5KVA Pure Sine Wave Inverter",
+    "category": "Generators & Power",
+    "price": 195000,
+    "image": "images/logo.png",
+    "images": [
+      "images/logo.png"
+    ],
+    "badge": null,
+    "description": "2500VA pure sine wave inverter with 24V input, built-in MPPT solar charge controller, USB charging port, LCD display and battery protection system.",
+    "stock": "in-stock",
+    "stockQty": 38,
+    "featured": false
+  },
+  {
+    "id": 14,
+    "name": "5KVA Silent Generator",
+    "category": "Generators & Power",
+    "price": 620000,
+    "image": "images/logo.png",
+    "images": [
+      "images/logo.png"
+    ],
+    "badge": "PREMIUM",
+    "description": "5KVA soundproof diesel generator with electric start, ATS compatibility, 12-hour run time on full tank, AVR voltage regulation and 4 outlets. Industrial-grade build.",
+    "stock": "in-stock",
+    "stockQty": 31,
+    "featured": true
+  },
+  {
+    "id": 18,
+    "name": "CCTV 8-Camera Security Kit",
+    "category": "Security Systems",
+    "price": 280000,
+    "image": "images/logo.png",
+    "images": [
+      "images/logo.png"
+    ],
+    "badge": "HOT",
+    "description": "Complete 8-camera 5MP CCTV system with 2TB NVR, night vision up to 40m, weatherproof cameras, motion detection alerts and remote viewing via mobile app.",
+    "stock": "in-stock",
+    "stockQty": 21,
+    "featured": false
+  },
+  {
+    "id": 16,
+    "name": "DC Ceiling Fan with LED Light",
+    "category": "Fans & Cooling",
+    "price": 85000,
+    "image": "images/logo.png",
+    "images": [
+      "images/logo.png"
+    ],
+    "badge": "NEW",
+    "description": "56-inch DC motor ceiling fan with 18W integrated LED light, remote control, 6-speed settings, silent operation, reversible motor and energy-saving technology.",
+    "stock": "in-stock",
+    "stockQty": 7,
+    "featured": false
+  },
+  {
+    "id": 4,
+    "name": "Front Load Washing Machine 8kg",
+    "category": "Home Appliances",
+    "price": 430000,
+    "image": "images/logo.png",
+    "images": [
+      "images/logo.png"
+    ],
+    "badge": "NEW",
+    "description": "8kg front-loading washing machine with 15 wash programs, quick-wash 30-min cycle, steam clean function, and anti-vibration technology. Quiet and energy efficient.",
+    "stock": "in-stock",
+    "stockQty": 37,
+    "featured": false
+  },
+  {
+    "id": 9,
+    "name": "HP LaserJet Pro Printer",
+    "category": "Computers & Laptops",
+    "price": 145000,
+    "image": "images/logo.png",
+    "images": [
+      "images/logo.png"
+    ],
+    "badge": null,
+    "description": "Monochrome laser printer with wireless printing, automatic two-sided printing, 35-page ADF, mobile printing via HP Smart app. Up to 30ppm print speed.",
+    "stock": "in-stock",
+    "stockQty": 34,
+    "featured": false
+  },
+  {
+    "id": 12,
+    "name": "High-Speed Blender 2L",
+    "category": "Kitchen Appliances",
+    "price": 55000,
+    "image": "images/logo.png",
+    "images": [
+      "images/logo.png"
+    ],
+    "badge": "HOT",
+    "description": "Professional 2-litre blender with 1500W motor, 6-blade stainless steel assembly, 5-speed settings + pulse, BPA-free Tritan jar, and self-cleaning function.",
+    "stock": "in-stock",
+    "stockQty": 17,
+    "featured": false
+  },
+  {
+    "id": 6,
+    "name": "iPhone 15 Pro Max 256GB",
+    "category": "Phones & Tablets",
+    "price": 1150000,
+    "image": "images/logo.png",
+    "images": [
+      "images/logo.png"
+    ],
+    "badge": "PREMIUM",
+    "description": "Apple iPhone 15 Pro Max with A17 Pro chip, 48MP triple camera system with 5x optical zoom, titanium design, Action Button, USB-C and up to 29 hours video playback.",
+    "stock": "in-stock",
+    "stockQty": 13,
+    "featured": true
+  },
+  {
+    "id": 17,
+    "name": "L-Shape Sectional Sofa",
+    "category": "Furniture & Decor",
+    "price": 480000,
+    "image": "images/logo.png",
+    "images": [
+      "images/logo.png"
+    ],
+    "badge": null,
+    "description": "Modern L-shaped sectional sofa in premium leatherette upholstery, high-density foam cushions, solid hardwood frame and 6-seater capacity. Available in black and grey.",
+    "stock": "in-stock",
+    "stockQty": 14,
+    "featured": false
+  },
+  {
+    "id": 8,
+    "name": "MacBook Air M2 13\" 256GB",
+    "category": "Computers & Laptops",
+    "price": 1250000,
+    "image": "images/logo.png",
+    "images": [
+      "images/logo.png"
+    ],
+    "badge": "BESTSELLER",
+    "description": "Apple MacBook Air with M2 chip, 8GB RAM, 256GB SSD, 13.6-inch Liquid Retina display, MagSafe charging, up to 18-hour battery life and fanless silent design.",
+    "stock": "in-stock",
+    "stockQty": 27,
+    "featured": true
+  },
+  {
+    "id": 11,
+    "name": "Microwave Oven 30L",
+    "category": "Kitchen Appliances",
+    "price": 98000,
+    "image": "images/logo.png",
+    "images": [
+      "images/logo.png"
+    ],
+    "badge": null,
+    "description": "30-litre microwave with grill function, convection cooking, 8 auto-cook menus, child safety lock, LED interior light and stainless steel cavity for easy cleaning.",
+    "stock": "in-stock",
+    "stockQty": 10,
+    "featured": false
+  },
+  {
+    "id": 7,
+    "name": "Samsung Galaxy Tab S9",
+    "category": "Phones & Tablets",
+    "price": 590000,
+    "image": "images/logo.png",
+    "images": [
+      "images/logo.png"
+    ],
+    "badge": null,
+    "description": "11-inch AMOLED display tablet with Snapdragon 8 Gen 2, 128GB storage, IP68 water resistance, S Pen included, DeX mode for desktop experience and 8000mAh battery.",
+    "stock": "limited",
+    "stockQty": 5,
+    "featured": false
+  },
+  {
+    "id": 3,
+    "name": "Side-by-Side Refrigerator 600L",
+    "category": "Home Appliances",
+    "price": 890000,
+    "image": "images/logo.png",
+    "images": [
+      "images/logo.png"
+    ],
+    "badge": "PREMIUM",
+    "description": "600-litre side-by-side refrigerator with water & ice dispenser, multi-flow cooling, inverter compressor, frost-free technology and LED interior lighting. A+ energy rating.",
+    "stock": "in-stock",
+    "stockQty": 30,
+    "featured": true
+  },
+  {
+    "id": 10,
+    "name": "Stand Mixer 6.5L Professional",
+    "category": "Kitchen Appliances",
+    "price": 215000,
+    "image": "images/logo.png",
+    "images": [
+      "images/logo.png"
+    ],
+    "badge": "NEW",
+    "description": "6.5-litre professional stand mixer with 10-speed settings, stainless steel bowl, dough hook, flat beater and wire whip attachments. 800W powerful motor with planetary mixing.",
+    "stock": "in-stock",
+    "stockQty": 41,
+    "featured": false
+  },
+  {
+    "id": 2,
+    "name": "Wireless Bluetooth Speaker",
+    "category": "Electronics",
+    "price": 38500,
+    "image": "images/logo.png",
+    "images": [
+      "images/logo.png"
+    ],
+    "badge": "HOT",
+    "description": "360° surround sound portable speaker with 24-hour battery life, IPX7 waterproof rating, dual pairing mode and deep bass. Perfect for indoor and outdoor use.",
+    "stock": "in-stock",
+    "stockQty": 23,
+    "featured": false
+  }
+]
