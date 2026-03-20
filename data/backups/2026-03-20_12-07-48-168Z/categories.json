@@ -1,0 +1,99 @@
+[
+  {
+    "id": 1,
+    "name": "Accessories",
+    "image": "images/logo.png",
+    "description": "Cables, chargers & gadget accessories"
+  },
+  {
+    "id": 2,
+    "name": "Adult Items",
+    "image": "images/logo.png",
+    "description": "Age-restricted products — 18+ only",
+    "ageRestricted": true
+  },
+  {
+    "id": 3,
+    "name": "Air Conditioners",
+    "image": "images/logo.png",
+    "description": "Split units, standing & portable ACs"
+  },
+  {
+    "id": 4,
+    "name": "Baby & Kids",
+    "image": "images/logo.png",
+    "description": "Baby gear, toys & nursery items"
+  },
+  {
+    "id": 5,
+    "name": "Computers & Laptops",
+    "image": "images/logo.png",
+    "description": "Laptops, desktops & peripherals"
+  },
+  {
+    "id": 6,
+    "name": "Electronics",
+    "image": "images/logo.png",
+    "description": "TVs, audio, cameras & more"
+  },
+  {
+    "id": 7,
+    "name": "Fans & Cooling",
+    "image": "images/logo.png",
+    "description": "Ceiling fans, standing & desk fans"
+  },
+  {
+    "id": 8,
+    "name": "Furniture & Decor",
+    "image": "images/logo.png",
+    "description": "Sofas, beds & home décor"
+  },
+  {
+    "id": 9,
+    "name": "Generators & Power",
+    "image": "images/logo.png",
+    "description": "Generators, inverters & solar"
+  },
+  {
+    "id": 10,
+    "name": "Home Appliances",
+    "image": "images/logo.png",
+    "description": "Fridges, washing machines & cookers"
+  },
+  {
+    "id": 11,
+    "name": "Kitchen Appliances",
+    "image": "images/logo.png",
+    "description": "Blenders, microwaves & ovens"
+  },
+  {
+    "id": 12,
+    "name": "Lighting",
+    "image": "images/logo.png",
+    "description": "Bulbs, lamps & outdoor lighting"
+  },
+  {
+    "id": 13,
+    "name": "Personal Care",
+    "image": "images/logo.png",
+    "description": "Grooming, skincare & health devices"
+  },
+  {
+    "id": 14,
+    "name": "Phones & Tablets",
+    "image": "images/logo.png",
+    "description": "Smartphones, tablets & accessories"
+  },
+  {
+    "id": 15,
+    "name": "Security Systems",
+    "image": "images/logo.png",
+    "description": "CCTV, alarms & smart locks"
+  },
+  {
+    "id": 16,
+    "name": "Sports & Fitness",
+    "image": "images/logo.png",
+    "description": "Exercise equipment & accessories"
+  }
+]

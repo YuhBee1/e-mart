@@ -1,0 +1,7 @@
+{
+  "PARAMOUNT10": { "type": "percent",  "value": 10, "label": "10% off",      "active": true },
+  "PARAMOUNT20": { "type": "percent",  "value": 20, "label": "20% off",      "active": true },
+  "WELCOME5":    { "type": "percent",  "value": 5,  "label": "5% off",       "active": true },
+  "FREESHIP":    { "type": "shipping", "value": 0,  "label": "Free delivery","active": true },
+  "FLAT5000":    { "type": "fixed",    "value": 5000,"label": "₦5,000 off",  "active": true }
+}
